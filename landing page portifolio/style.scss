@@ -181,8 +181,8 @@ main{
             width: 60%;
             padding: $spacing;
             @include flex(center, start, column);
-            @include media{
-                    width: 100%;
+            @include media(1100){
+                width: 100%;
             }
             .desc{
                 // width: 70%;
@@ -193,6 +193,7 @@ main{
             }
 
             .projeto{
+                width: 100%;
                 background-color: $cor-fundo-projetos;
                 padding: $spacing;
                 font-size: .8rem;
@@ -201,6 +202,11 @@ main{
                 border-radius: $border-radius;
                 margin-bottom: $margin-top;
                 @include media(500)
+                {
+                    flex-direction: column;
+                }
+
+                @include media(770)
                 {
                     flex-direction: column;
                 }
